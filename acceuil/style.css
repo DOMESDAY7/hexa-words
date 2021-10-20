@@ -1,8 +1,15 @@
 body{
     background-color: #1D1075;
-    display: grid;
-    grid-template:5vh 2fr 1fr 1fr 3vh ;
+    
 
+
+}
+.content{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    height: 100vh;
+    
 }
 h1{
     font-size: 4rem;
@@ -10,7 +17,7 @@ h1{
     font-family: 'Quando', serif;
     text-align: center;
 
-    grid-area:  2/ 1;
+    grid-area: 2 / 2 / 3 / 3;
 }
 
 .button{
@@ -21,6 +28,15 @@ h1{
     text-decoration: none;
     font-size: 1.5rem;
     text-align: center;
-    margin-bottom: 1vh;
     border-radius: 10px;
+}
+.content_link{
+   
+    grid-area: 4 / 2 / 5 / 3; 
+}
+.link1{
+    grid-area: 4 / 2 / 5 / 3;
+}
+.link2{
+    grid-area: 5 / 2 / 6 / 3;
 }
