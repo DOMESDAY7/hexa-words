@@ -1,14 +1,18 @@
+*{
+    box-sizing: border-box;
+}
 body{
-    background-color: #1D1075;
-    
-
-
+    overflow-x: hidden;
+    overflow-y:hidden ;
+    margin: 0;
 }
 .content{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(6, 1fr);
     height: 100vh;
+    background-color: #1D1075;
+    width: 100vw;
     
 }
 h1{
@@ -16,6 +20,7 @@ h1{
     color: white;
     font-family: 'Quando', serif;
     text-align: center;
+   
 
     grid-area: 2 / 2 / 3 / 3;
 }
@@ -23,20 +28,28 @@ h1{
 .button{
     color: white;
     border: 2px solid white;
-    padding: 5vw;
+    padding: 4vw;
     font-family: 'Questrial', sans-serif;
     text-decoration: none;
     font-size: 1.5rem;
     text-align: center;
     border-radius: 10px;
+    margin-bottom:5vh ;
 }
-.content_link{
-   
-    grid-area: 4 / 2 / 5 / 3; 
-}
+
 .link1{
     grid-area: 4 / 2 / 5 / 3;
 }
 .link2{
     grid-area: 5 / 2 / 6 / 3;
 }
+.titreIdiot{
+    font-size: 4rem;
+    color: white;
+    font-family: 'Quando', serif;
+    text-align: center;
+    grid-area: 3/2/3/2 ;
+   
+   
+}
+
