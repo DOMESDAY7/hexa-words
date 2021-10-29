@@ -1,0 +1,58 @@
+body{
+    background-color: #E3E3E3;
+    position:relative;
+    overflow-y: hidden;
+}
+.person{
+    width: 50vw;
+}
+.rand_button{
+   color: white;
+   background-color: black; 
+   font-family: 'Questrial', sans-serif;
+   font-size: 0.875rem;
+   border: none;
+   padding: 3vh;
+   border-radius: 5%;
+   grid-area: rand;
+}
+.choose_button{
+    background-color:  #2100FF;
+    border: black 2px solid;
+    font-family: 'Questrial', sans-serif;
+    padding: 2vh 5vh 2vh 5vh;
+    color: white;
+    border-radius: 5%;
+    grid-area: choose;
+
+}
+.blob1{
+    animation: rotate 60s linear infinite;
+    position: absolute;
+    left: 70%;
+    top: -50%;
+    z-index: -1;
+    transform: rotate(-50%,-50%);
+}
+.blob2{
+    position: absolute;
+    left: -60%;
+    top: 150%;
+    z-index: -1;
+    transform: rotate(-50%,0%);
+    animation: rotate 100s linear infinite;
+}
+.content{
+    text-align: center;
+    width: 50vw;
+    margin: auto;  
+}
+.hide{
+    display: none;
+}
+@keyframes rotate {
+    to{
+        transform: rotate(3606deg);
+    }
+    
+}

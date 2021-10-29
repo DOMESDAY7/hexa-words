@@ -1,8 +1,13 @@
 
-let person=[1,2,3,4,5,6,7,8,9,10];
-let id=0;
-document.querySelector('.rand').addEventListener("click",function(){
-    
-    document.querySelector('.person').setAttribute("src",`./personnage/person${person[id]}.svg`);
-    id++;
+let id=1;
+let id_perso;
+document.querySelector('.rand_button').addEventListener("click",function(){
+    if( id<10){
+        id++;
+        }else{
+        id=1;
+        }   
+    document.querySelector('.person').setAttribute("src",`./personnage/person${id}.png`);
+    id_perso=document.querySelector('.hide').value=id;
+   
 });
