@@ -14,7 +14,7 @@
     <img src="blob.svg" alt="" class="blob2">
     <div class="content">
     <button class="rand_button">randomize</button>
-    <form method="GET" action="#">
+    <form method="GET" action="../write/index.php">
     <input type="text" name="id_perso" class="hide">
     <button type="submit" class="choose_button">Chooses <br><img src="arrow.svg" alt=""></button>
     </form>
