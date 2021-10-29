@@ -11,7 +11,7 @@ if (width > 800) {
     idiot.innerHTML="#1D1075";
    }
 }
-document.querySelector(".button").addEventListener("click",setTimeout(function(){
-    document.querySelector('.content').style.marginTop='-100vh';
-},2000))
+// document.querySelector(".button").addEventListener("click",setTimeout(function(){
+//     document.querySelector('.content').style.marginTop='-100vh';
+// },2000))
 //tant que le curseur est sur l'élément ayant la class titreIdiot faire idiot.innerHTML
