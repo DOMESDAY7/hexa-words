@@ -14,4 +14,12 @@ if (width > 800) {
 // document.querySelector(".button").addEventListener("click",setTimeout(function(){
 //     document.querySelector('.content').style.marginTop='-100vh';
 // },2000))
+document.querySelectorAll(".button").forEach(e=>{
+    e.addEventListener("click",function(){
+        document.querySelector('.content').animate([{marginTop:'-100vh'}],{duration:1000});
+        
+    })
+
+})
+
 //tant que le curseur est sur l'élément ayant la class titreIdiot faire idiot.innerHTML
