@@ -1,14 +1,58 @@
+body{
+    background-color:#E3E3E3 ;
+}
 .content_perso{
-    border: solid black 2px;
-    height: 10vh;
-    width: 10vh;
+    /* border: solid black 2px; */
+    height: 17vh;
+    width: 17vh;
     border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #E3E3E3;
 }
 .img_perso{
     height: auto;
-    width: 100%;
+    width: 130%;
+    margin: auto;
 }
 .title{
     font-family: 'Quando', serif;
     color: #1D1075;
+    text-align: center;
+}
+.content_user{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* border: solid red 1px; */
+    background-color: #1D1075;
+    height: 15vh;
+    border-radius: 10px;
+    transition: 0.8s ease;
+    /* margin-bottom: 1vh; */
+}
+.nickname{
+    font-family: 'Questrial', sans-serif;
+    color: white;
+
+}
+.story{
+    font-family: 'Questrial', sans-serif;
+    
+}
+main{
+    text-align: center;
+}
+.content_story{
+    display: none;
+    border: black solid 1px;
+    border-top: none;
+    color: white;
+    position: relative;
+    z-index: 3;
+    border-radius: 0 0 10px 10px;
+    width: 100%;
+    text-align: left;
+    
 }
