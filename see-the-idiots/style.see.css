@@ -1,0 +1,14 @@
+.content_perso{
+    border: solid black 2px;
+    height: 10vh;
+    width: 10vh;
+    border-radius: 50%;
+}
+.img_perso{
+    height: auto;
+    width: 100%;
+}
+.title{
+    font-family: 'Quando', serif;
+    color: #1D1075;
+}
