@@ -12,17 +12,18 @@
 </head>
 
 <body>
-    
-    <span class="content_rand">
-    <button class="rand_button">randomize</button>
-    </span>
-    <form method="GET" action="../write/index.php">
-        <input type="text" name="id_perso" class="hide">
-        <span class="content_choose">
-        <button type="submit" class="choose_button">Chooses <br><img src="arrow.svg" alt=""></button>
+    <main class="content">
+        <span class="content_rand">
+        <button class="rand_button">randomize</button>
         </span>
-    </form>
-    <section class="content_person"><img src="./personnage/person1.png" alt="personnage" class="person"></section>
+        <form method="GET" action="../write/index.php">
+            <input type="text" name="id_perso" class="hide">
+            <span class="content_choose">
+            <button type="submit" class="choose_button">Chooses <br><img src="arrow.svg" alt=""></button>
+            </span>
+        </form>
+        <section class="content_person"><img src="./personnage/person1.png" alt="personnage" class="person"></section>
+    </main>
     <img src="blob.svg" alt="" class="blob1">
     <img src="blob.svg" alt="" class="blob2">
     <script src="script.js "></script>

@@ -6,8 +6,13 @@ body{
     background-color: #E3E3E3;
     position:relative;
     overflow-y: hidden;
-    
-   display: grid;
+   
+   
+  
+
+}
+.content{
+    display: grid;
    grid-template: 
    "content_rand" 0.25fr
    "content_choose" 0.5fr
@@ -15,8 +20,6 @@ body{
    border: solid red;
    height: 100vh;
    width:100vw;
-   
-  
 
 }
 .content_person{
@@ -27,7 +30,7 @@ body{
     
 }
 .person{
-    width: 90%;
+    width: 100%;
     transition: 0.8s ease;
     
 }
@@ -72,14 +75,13 @@ body{
     left: 50%;
     top: -50%;
     z-index: -1;
-    /* transform: translate(-50%,0); */
+   
 }
 .blob2{
     position: absolute;
-    left: -30%;
+    left: 0;
     bottom: -50%;
     z-index: -1;
-    transform: translate(-50%,0);
     animation: rotate 10s linear infinite;
 }
 
@@ -87,8 +89,11 @@ body{
     display: none;
 }
 @keyframes rotate {
+    from{
+        transform:translate(-50%,0)
+    }
     to{
-        transform: rotate(360deg);
+        transform: translate(-50%,0) rotate(360deg);
     }
     
 }

@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <div class='content'>
+    <div class="content">
         <h1>I am an<br></h1>
         <h1 class="titreIdiot"> Idiot</h1>
         <section class="content_button">

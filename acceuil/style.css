@@ -15,9 +15,9 @@ body {
     "c_button" 1fr
     ;
     height: 100vh;
-    background-color: #1D1075;
     width: 100vw;
     margin-top: 0;
+    border: solid red;
     
 
 }
