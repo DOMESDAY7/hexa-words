@@ -16,7 +16,7 @@
         <span class="content_rand">
         <button class="rand_button">randomize</button>
         </span>
-        <form method="GET" action="../write/index.php">
+        <form method="GET" action="../write">
             <input type="text" name="id_perso" class="hide">
             <span class="content_choose">
             <button type="submit" class="choose_button">Chooses <br><img src="arrow.svg" alt=""></button>

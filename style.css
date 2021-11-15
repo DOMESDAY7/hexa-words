@@ -1,0 +1,84 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+    margin: 0;
+}
+
+.content {
+    display: grid;
+    grid-template:
+    "iam" 0.10fr 
+    "idiot" 0.10fr
+    "c_button" 1fr
+    ;
+    height: 100vh;
+    width: 100vw;
+    margin-top: 0;
+    border: solid red;
+    
+
+}
+
+h1 {
+    margin-bottom: -30px;
+    font-size: 4rem;
+    color: transparent;
+    background: #000000;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    text-shadow: 0px 3px 7px #1D1075;
+    font-family: 'Quando', serif;
+    text-align: center;
+    grid-area: iam;
+
+}
+.content_button{
+    grid-area: c_button;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+.button {
+    background: linear-gradient(180deg, #211285 0%, #180D60 100%);
+    box-shadow: 1.34711e-15px 22px 44px rgba(6, 3, 23, 0.2785), inset -4.52031e-16px -7.38222px 7.38222px #160C5A, inset 4.52031e-16px 7.38222px 7.38222px #22138A;
+    border-radius: 15px;
+    width: 70%;
+    padding: 3.5vw;
+    font-family: 'Questrial', sans-serif;
+    text-decoration: none;
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 5vh;
+    color: #f9f9fb;
+    
+    transition: 0.3s ease;
+}
+.button:hover{
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    color: rgba(249, 249, 251, 0.507);
+    
+}
+
+
+.titreIdiot {
+    font-size: 4rem;
+    color: #FFFFFF;
+    text-shadow: 0 1px 0 #CCCCCC, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #1D1075, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, .1), 0 0 5px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .2), 0 20px 20px rgba(0, 0, 0, .15);
+    font-family: 'Quando', serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: idiot;
+    margin-bottom: 2vh;
+
+
+}

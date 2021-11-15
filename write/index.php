@@ -9,19 +9,34 @@
 </head>
 <body>
     <?php
+    
     $id=$_GET["id_perso"];
+    if ($id==null){
+        header("Location:../choice");
+    }
     echo "<script class='hide'>let id_perso= $id</script>";
 
     ?>
-    <form method="POST">
-        <input type="text" name="nickname" placeholder="idiot's nickname" require>
-        <input type="text" name="story" placeholder="why she/he is so idiot?" require>
-        <button type="submit" name="sub">send the idiocy</button>
+    <form method="POST"  class="form">
+        <section class='content_form'>
+        <input type="text" name="nickname" placeholder="idiot's nickname" require class="nickname">
+        <input type="text" name="story" placeholder="why she/he is so idiot?" require class="why">
+        </section>
+       
     </form>
-    <section class="perso"></section>
+    <button type="submit" name="sub" class="submit_button">send the idiocy</button>
+    
+    <section class="content_perso"></section>
     <?php 
-    $link = new PDO('mysql:host=localhost;dbname=idiots', 'root', '', array
-    (PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
+    
+    if($_SERVER['SERVER_NAME']== 'localhost'){
+    require '../connect/local.php';
+
+    }else{
+        require '../connect/server.php';
+    }
+
+
     if (isset($_POST["sub"])){
         $nickname=$_POST["nickname"];
         $story=$_POST["story"];
