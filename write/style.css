@@ -2,12 +2,13 @@ body{
     background-color: #E3E3E3;
     display: grid;
     grid-template: 
-    "form"1fr
+    "form"20vh
     "submit_button"0.20fr
     "content_perso"1fr
     
     
     ;
+    height: 100vh;
 }
 .submit_button{
     grid-area: submit_button;
@@ -16,8 +17,10 @@ body{
     background-color: #2100FF;
     color: white;
     border: black 2px solid;
-    padding: 3%;
+    padding: 10px;
     border-radius: 10px;
+    transition: 0.8s ease;
+    
 }
 .hide{
     display: none;
@@ -27,12 +30,15 @@ input{
 }
 
 .perso{
-    width: 70%;
+    width: 90%;
+    min-width: 100px;
 }
 .content_perso{
     text-align: center;
     /* border:solid red; */
     grid-area: content_perso;
+    align-self: start;
+    transition: 0.8s ease;
 }
 .nickname{
     background-color:#1D1075 ;
@@ -55,16 +61,36 @@ input{
 
 }
 .form{
-    grid-area: form;
-    width: 50vw;
-    justify-self: center;
-    align-self:center ;
-}
-.content_form{
     display: flex;
     flex-direction: column;
     width: 50vw;
-    grid-area: content_form;
+    grid-area: form;
     justify-self: center;
     align-self:center ;
+    min-width: 200px;
+    max-width: 500px;
+    
+}
+@media (min-width:1000px){
+
+    body{
+        grid-template: 
+        "content_perso form"1fr
+        "content_perso submit_button" 1fr/1fr 1fr
+        
+        ;
+        gap:  1vh 0;
+    }
+    .content_perso{
+        align-self: center;
+    }
+    .submit_button{
+        align-self: start;
+    }
+    .form{
+        align-self: end;
+        
+    }
+
+
 }

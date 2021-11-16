@@ -18,10 +18,10 @@
 
     ?>
     <form method="POST"  class="form">
-        <section class='content_form'>
+    
         <input type="text" name="nickname" placeholder="idiot's nickname" require class="nickname">
         <input type="text" name="story" placeholder="why she/he is so idiot?" require class="why">
-        </section>
+        
        
     </form>
     <button type="submit" name="sub" class="submit_button">send the idiocy</button>
@@ -53,6 +53,7 @@
             $req=$link->prepare($sql_insert);
             $req=verification($req);
             $req->execute();
+            header("Location:./see-the-idiots")
             
         }
     } 
