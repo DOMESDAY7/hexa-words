@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Choice</title>
     <!-- localhost/hexa-words/choice -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../public/css/choice.css">
     <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
 </head>
 
@@ -22,11 +22,11 @@
             <button type="submit" class="choose_button">Chooses <br><img src="arrow.svg" alt=""></button>
             </span>
         </form>
-        <section class="content_person"><img src="./personnage/person1.png" alt="personnage" class="person"></section>
+        <section class="content_person"><img src="../public/img/personnage/person1.png" alt="personnage" class="person"></section>
     </main>
     <img src="blob.svg" alt="" class="blob1">
     <img src="blob.svg" alt="" class="blob2">
-    <script src="script.js "></script>
+    <script src="../public/js/choice.js "></script>
 
 </body>
 
