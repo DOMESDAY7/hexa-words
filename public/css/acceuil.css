@@ -17,7 +17,7 @@ body {
     height: 100vh;
     width: 100vw;
     margin-top: 0;
-    border: solid red;
+    background-color: #1D1075;
     
 
 }
@@ -42,12 +42,18 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
+  
+    align-self: center;
     
 }
+
 .button {
-    background: linear-gradient(180deg, #211285 0%, #180D60 100%);
-    box-shadow: 1.34711e-15px 22px 44px rgba(6, 3, 23, 0.2785), inset -4.52031e-16px -7.38222px 7.38222px #160C5A, inset 4.52031e-16px 7.38222px 7.38222px #22138A;
+    background-color: #1D1075;
+    box-shadow: 
+    0 0 0 0 rgba(0, 0, 100, 0.623),
+    0 0 0 0 #362b81;
+      
     border-radius: 15px;
     width: 70%;
     padding: 3.5vw;
@@ -58,13 +64,14 @@ h1 {
     margin-bottom: 5vh;
     color: #f9f9fb;
     
-    transition: 0.3s ease;
+    transition: box-shadow 0.3s , background-color 0.3s ease-in-out ;
+
 }
 .button:hover{
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    background-clip: text;
-    color: rgba(249, 249, 251, 0.507);
+    background-color: #1D1075;
+    box-shadow: 
+    6px 6px 12px 0px rgb(0, 0, 100),
+    -10px -10px 12px 0px #4739a5;
     
 }
 

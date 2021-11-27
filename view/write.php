@@ -29,34 +29,9 @@
     <section class="content_perso"></section>
     <?php 
     
-    if($_SERVER['SERVER_NAME']== 'localhost'){
-    require '../connect/local.php';
-
-    }else{
-        require '../connect/server.php';
-    }
+  
 
 
-    if (isset($_POST["sub"])){
-        $nickname=$_POST["nickname"];
-        $story=$_POST["story"];
-        if (!isset($nickname)||!isset($story)){
-            die();
-        }else{
-            function verification($string){
-                htmlspecialchars("$string"); // contre les injections de script
-                $sign=["DELETE","FROM", "UPDATE","SELECT","<script>","</script>"];
-                $string=str_replace($sign,"ᓚᘏᗢ",$string);//contre les injections sql
-                return $string; 
-            }
-            $sql_insert="INSERT INTO `user_story` (`id`, `nickname`, `story`,`id_perso`) VALUES (NULL, '$nickname', '$story', '$id')";
-            $req=$link->prepare($sql_insert);
-            $req=verification($req);
-            $req->execute();
-            header("Location:./see-the-idiots")
-            
-        }
-    } 
     
     ?>
     <script src="../public/js/write.js"></script>

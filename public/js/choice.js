@@ -7,7 +7,7 @@ document.querySelector('.rand_button').addEventListener("click",function(){
         }else{
         id=1;
         }   
-    document.querySelector('.person').setAttribute("src",`./personnage/person${id}.png`);
+    document.querySelector('.person').src=`../public/img/personnage/person${id}.png`;
     id_perso=document.querySelector('.hide').value=id;
    
 });
