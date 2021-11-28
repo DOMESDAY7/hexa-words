@@ -1,20 +1,25 @@
 body{
     background-color: #E3E3E3;
     display: grid;
+    margin-top: 5vh;
     grid-template: 
-    "form"20vh
+    "form"30vh
     "submit_button"0.20fr
     "content_perso"1fr
     
     
     ;
+    gap:2vh 5vh;
     height: 100vh;
+    background-image: url(../img/Idiot\ bg.svg);
+    background-repeat: round;
+   
 }
 .submit_button{
     grid-area: submit_button;
     justify-self: center;
     align-self: center;
-    background-color: #2100FF;
+    background-color: #1D1075;
     color: white;
     border: black 2px solid;
     padding: 10px;
@@ -30,15 +35,19 @@ input{
 }
 
 .perso{
-    width: 90%;
+    width: 60%;
     min-width: 100px;
+    transition: 0.8s ease;
+    margin: auto;
 }
 .content_perso{
     text-align: center;
-    /* border:solid red; */
     grid-area: content_perso;
-    align-self: start;
+    align-self: start;s;
     transition: 0.8s ease;
+    display: flex;
+    flex-direction: column;
+    
 }
 .nickname{
     background-color:#1D1075 ;
@@ -47,9 +56,13 @@ input{
     border-radius: 10px 10px 0 0;
     text-align: center;
     border: black solid 2px;
+    font-family: 'Quando',sans-serif;
+    font-size: 1rem;
+    word-wrap: break-word;
 }
 .nickname::placeholder{
     color: white;
+
  }
  
 .why{
@@ -58,6 +71,11 @@ input{
     border: black solid 2px;
     text-align: center;
     border-radius: 0 0 10px 10px;
+    font-family: 'Questrial',sans-serif;
+    font-size: 0.875rem;
+    word-wrap: break-word;
+    resize: none;
+    outline: none;
 
 }
 .form{
@@ -66,12 +84,27 @@ input{
     width: 50vw;
     grid-area: form;
     justify-self: center;
-    align-self:center ;
+    align-self:end ;
     min-width: 200px;
     max-width: 500px;
+    transition:0.3s ease;
+   
+    
     
 }
-@media (min-width:1000px){
+.buble{
+    background-color: #1D1075;
+    border: solid black 1px;
+    color:white;
+    font-family: 'Questrial',sans-serif;
+    font-size: calc(0.5rem + 1vw);
+   padding: 15px;
+   width: 30%;
+    border-radius: 10px ;
+    display: inline-block;
+    margin: auto;
+}
+@media (min-width:600px){
 
     body{
         grid-template: 
@@ -81,8 +114,13 @@ input{
         ;
         gap:  1vh 0;
     }
+    .perso{
+        width: 90%;
+    }
     .content_perso{
         align-self: center;
+        display: flex;
+        flex-direction: row-reverse;
     }
     .submit_button{
         align-self: start;
@@ -90,6 +128,9 @@ input{
     .form{
         align-self: end;
         
+    }
+    .buble{
+        border-radius: 50px 10px 10px 0;
     }
 
 

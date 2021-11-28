@@ -9,20 +9,22 @@
     <!-- localhost/hexa-words/choice -->
     <link rel="stylesheet" href="../public/css/choice.css">
     <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+    <!-- icone -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+      <link rel="shortcut icon" href="../public//img/fav.svg" type="image/x-icon">
 </head>
 
 <body>
     <main class="content">
-        <span class="content_rand">
-        <button class="rand_button">randomize</button>
-        </span>
-        <form method="GET" action="../write">
+        <button class="rand_button">randomize<br><span class="material-icons" id=refresh>refresh</span></button>
+        <form method="GET" action="../controller/controller_write.php" class="form">
             <input type="text" name="id_perso" class="hide">
-            <span class="content_choose">
-            <button type="submit" class="choose_button">Chooses <br><img src="arrow.svg" alt=""></button>
-            </span>
         </form>
-        <section class="content_person"><img src="../public/img/personnage/person1.png" alt="personnage" class="person"></section>
+        <button type="submit" class="choose_button">Chooses <br><span class="material-icons">
+check
+</span></button>
+        <section class="content_person"><img src="../public/img/personnage/person1.svg" alt="personnage" class="person"></section>
     </main>
     <img src="blob.svg" alt="" class="blob1">
     <img src="blob.svg" alt="" class="blob2">

@@ -6,34 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Write</title>
     <link rel="stylesheet" href="../public/css/write.css">
-</head>
-<body>
-    <?php
-    
-    $id=$_GET["id_perso"];
-    if ($id==null){
-        header("Location:../choice");
-    }
-    echo "<script class='hide'>let id_perso= $id</script>";
+    <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quando&display=swap" rel="stylesheet">
 
-    ?>
+</head>
+<body>   
     <form method="POST"  class="form">
-    
         <input type="text" name="nickname" placeholder="idiot's nickname" require class="nickname">
-        <input type="text" name="story" placeholder="why she/he is so idiot?" require class="why">
-        
-       
+        <!-- <input type="text" name="story" placeholder="why she/he is so idiot?" require class="why"> -->
+        <textarea name="story"  cols="15" rows="5" class="why" placeholder="why she/he is so idiots ?"></textarea>
     </form>
     <button type="submit" name="sub" class="submit_button">send the idiocy</button>
+    <section class="content_perso">
+        
+        <pre class="buble">Hi! My name is <span class="name"></span></pre>
+        <img src="../public/img/personnage/person<?= $id ?>.svg" alt="" class="perso">
+    </section>
     
-    <section class="content_perso"></section>
-    <?php 
-    
-  
-
-
-    
-    ?>
     <script src="../public/js/write.js"></script>
     
 </body>
