@@ -21,7 +21,7 @@
         <h1 class="titreIdiot"> Idiot</h1>
         <section class="content_button">
            <a href="../index.php?page=tell" class="button link1">Tell my idiocy</a><br>
-            <a href="#see" class="button link2">See others the idiots</a>
+            <a href="../index.php?page=see" class="button link2">See others the idiots</a>
         </section>
     </div>
 <!-- <script src='script.js'></script> -->

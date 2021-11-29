@@ -1,21 +1,26 @@
 body{
     background-color:#E3E3E3 ;
     margin: 0;
+    background-image: url(../img/Idiot\ bg.svg);
+    background-repeat: round;
+    overflow-x: hidden;
 }
 .content_perso{
     /* border: solid black 2px; */
-    height: 17vh;
-    width: 17vh;
+    height: 50%;
+    width: 10%;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #E3E3E3;
+   
 }
 .img_perso{
     height: auto;
     width: 50%;
     margin: auto;
+    border-radius: 50%;
+    border: solid white;
 }
 .title{
     font-family: 'Quando', serif;
@@ -26,12 +31,15 @@ body{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    /* border: solid red 1px; */
+   
     background-color: #1D1075;
-    height: 15vh;
+    width: 80%;
+    height: 20%;
     border-radius: 10px;
     transition: 0.8s ease;
-    /* margin-bottom: 1vh; */
+    margin: auto;
+    margin-bottom: 2%;
+    
 }
 .nickname{
     font-family: 'Questrial', sans-serif;
@@ -45,12 +53,14 @@ body{
 main{
     text-align: center;
     display: flex;
-    justify-content: space-around;
-    align-items:center;
-    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-content: space-evenly;
+    /* flex-wrap: wrap; */
     width: 100vw;
-    height: 100vh;
-    border: solid red;
+    /* height: 100vh; */
+    
+    
 
 }
 .content_story{

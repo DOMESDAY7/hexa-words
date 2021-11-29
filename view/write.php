@@ -14,12 +14,13 @@
     <form method="POST"  class="form" name="form" action="../controller/controller_see.php">
         <input type="text" name="nickname" placeholder="idiot's nickname" require class="nickname" maxlength="10" minlength="3">
         <textarea name="story"  cols="15" rows="5" class="why" placeholder="why she/he is so idiots ?" maxlength="280"></textarea>
+        <input type="text" name="id_perso" value="<?php echo $id; ?>" style="display:none">
     </form>
     <button type="submit" name="sub" class="submit_button">Send the idiocy</button>
     <section class="content_perso">
         
         <pre class="buble">Hi! My name is <span class="name">...</span></pre>
-        <img src="../public/img/personnage/person<?= $id ?>.svg" alt="" class="perso">
+        <img src="../public/img/personnage/person<?= $id ?>.svg" alt="" class="perso" >
     </section>
     
     <script src="../public/js/write.js"></script>
