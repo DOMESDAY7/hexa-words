@@ -63,7 +63,7 @@ main{
     color: black;
     border-radius:  10px;
     background-color: rgba(235, 235, 235, 0.719);
-    backdrop-filter: blur(10px); text-align: left;
+    backdrop-filter: blur(10px); 
     
 }
 @media (min-width:768px) {
@@ -75,15 +75,16 @@ main{
         width: 70%;
     }
     .content_story{
-        display: block;
-        width: 50%;
+        display: inline;
+        margin: auto;
+        margin-left: -50%;
+        margin-top: 7%;
     }
     .content_card{
         display: flex;
         margin-bottom: 2%;
         justify-content: center;
         align-items: center;
-        justify-content: space-between;
     }
     .nickname{
         color: #1D1075;

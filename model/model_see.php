@@ -42,7 +42,7 @@ function listIdiot(){
                 </section>
                 <section class="content_story">
                         <p class="story" id="user_<?php echo $data["id"];?>">" <?php echo $data["story"] ?> "</p>
-                    </section>
+                </section>
             </div>
             
 
