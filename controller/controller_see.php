@@ -6,5 +6,5 @@ postIdiot();
 // }elseif ($_GET["action"]=="see"){
 
 // }
-$listIdiot=listIdiot();
+
 require '../view/see.php';

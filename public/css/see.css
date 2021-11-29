@@ -1,5 +1,6 @@
 body{
     background-color:#E3E3E3 ;
+    margin: 0;
 }
 .content_perso{
     /* border: solid black 2px; */
@@ -13,7 +14,7 @@ body{
 }
 .img_perso{
     height: auto;
-    width: 130%;
+    width: 50%;
     margin: auto;
 }
 .title{
@@ -44,7 +45,13 @@ body{
 main{
     text-align: center;
     display: flex;
-    border: red solid;
+    justify-content: space-around;
+    align-items:center;
+    flex-wrap: wrap;
+    width: 100vw;
+    height: 100vh;
+    border: solid red;
+
 }
 .content_story{
     display: none;
