@@ -2,12 +2,10 @@ body{
     background-color: #E3E3E3;
     display: grid;
     margin-top: 5vh;
-    grid-template: 
-    "form"30vh
-    "submit_button"0.20fr
-    "content_perso"1fr
-    
-    
+    grid-template:
+    "content_perso"0.1fr
+    "form"0.5fr
+    "submit_button"0.2fr
     ;
     gap:2vh 5vh;
     height: 100vh;
@@ -25,7 +23,12 @@ body{
     padding: 10px;
     border-radius: 10px;
     transition: 0.8s ease;
+    font-family: 'Quando',sans-serif;
+    cursor: pointer;
     
+}
+.submit_button:hover{
+    animation: call-back 1s;
 }
 .hide{
     display: none;
@@ -39,6 +42,7 @@ input{
     min-width: 100px;
     transition: 0.8s ease;
     margin: auto;
+    
 }
 .content_perso{
     text-align: center;
@@ -99,12 +103,39 @@ input{
     font-family: 'Questrial',sans-serif;
     font-size: calc(0.5rem + 1vw);
    padding: 15px;
-   width: 30%;
     border-radius: 10px ;
     display: inline-block;
     margin: auto;
 }
-@media (min-width:600px){
+@keyframes call-back {
+    0%{}
+   50%{transform: scale(1.2);}
+   100%{}
+    
+}
+@media (min-width:768px) {
+    body{
+        grid-template:
+        "content_perso content_perso"0.1fr
+        "form submit_button"0.5fr/ 1fr 0.5fr
+        
+    ;
+    gap: 2vh 2vh;
+    }
+    .submit_button{
+        justify-self: start;
+        align-self: center;
+    }
+
+    .perso{
+        width:40%;
+    }
+    .form{
+        justify-self: end;
+    }
+    
+}
+@media (min-width:1024px){
 
     body{
         grid-template: 
@@ -115,7 +146,7 @@ input{
         gap:  1vh 0;
     }
     .perso{
-        width: 90%;
+        width: 70%;
     }
     .content_perso{
         align-self: center;
@@ -124,13 +155,15 @@ input{
     }
     .submit_button{
         align-self: start;
+        justify-self: center;
     }
     .form{
-        align-self: end;
+        justify-self: center;
+        align-self:end ;
         
     }
     .buble{
-        border-radius: 50px 10px 10px 0;
+        border-radius: 40px 10px 10px 0;
     }
 
 

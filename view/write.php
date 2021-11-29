@@ -11,15 +11,14 @@
 
 </head>
 <body>   
-    <form method="POST"  class="form">
+    <form method="POST"  class="form" name="form" action="../controller/controller_see.php">
         <input type="text" name="nickname" placeholder="idiot's nickname" require class="nickname">
-        <!-- <input type="text" name="story" placeholder="why she/he is so idiot?" require class="why"> -->
         <textarea name="story"  cols="15" rows="5" class="why" placeholder="why she/he is so idiots ?"></textarea>
     </form>
-    <button type="submit" name="sub" class="submit_button">send the idiocy</button>
+    <button type="submit" name="sub" class="submit_button">Send the idiocy</button>
     <section class="content_perso">
         
-        <pre class="buble">Hi! My name is <span class="name"></span></pre>
+        <pre class="buble">Hi! My name is <span class="name">...</span></pre>
         <img src="../public/img/personnage/person<?= $id ?>.svg" alt="" class="perso">
     </section>
     
