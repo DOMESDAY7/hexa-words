@@ -12,11 +12,11 @@ function verification($string){
     htmlspecialchars($string);//contre les injection HTML
     return $string;
 }
-function postIdiot(){
-    require '../connect/detection.php';
-    $nickname=$_POST["nickname"];
-    $story=$_POST["story"];
-    $id=$_POST["id_perso"];
+function postIdiot($data){
+    require './connect/detection.php';
+    $nickname=$data["nickname"];
+    $story=$data["story"];
+    $id=$data["id_perso"];
     $nickname=verification($nickname);
     $nickname=htmlspecialchars($nickname);
     $nickname=filter_var($nickname,FILTER_SANITIZE_ADD_SLASHES); 
@@ -28,16 +28,17 @@ function postIdiot(){
     //bindValue
     //bindParam
     $req->execute();
+    
 }
 function listIdiot(){
-    require '../connect/detection.php';
+    require './connect/detection.php';
     $sql="SELECT * FROM user_story ORDER BY id DESC";
     $req=$link->query($sql);
     while ($data=$req->fetch(PDO::FETCH_ASSOC)){ ?>
 
             <div class="content_card">
                 <section class="content_user">
-                        <div class="content_perso"><img src="../public/img/personnage/person<?php echo $data["id_perso"]?>.svg" class="img_perso"></div>
+                        <div class="content_perso"><img src="./public/img/personnage/person<?php echo $data["id_perso"]?>.svg" class="img_perso"></div>
                         <h1 class="nickname"><?php echo $data["nickname"] ?></h1><br>
                 </section>
                 <section class="content_story">

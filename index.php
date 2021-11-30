@@ -1,13 +1,20 @@
 <?php
-
 if (!isset($_GET["page"])){
-    header("Location:view/acceuil.php");
+    $page="acceuil";
+    require 'view/head.php';
+    require 'view/acceuil.php';
 }else{
-    if($_GET["page"]=="tell"){
-       header('Location:view/choice.php');
+    $page = $_GET["page"];
+    require 'model/model.php';
+    require 'view/head.php';
+    if($page=="write"){
+        require 'controller/controller_write.php';
     }
-    if ($_GET["page"]=="see"){
-        header('Location:view/see.php');
-    }
+
+    require 'view/'.$page.'.php';
 }
+
+
+
+
 

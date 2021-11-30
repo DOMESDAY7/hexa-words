@@ -25,7 +25,7 @@ rand.addEventListener("click",function(){
     ],
     {duration:200}
     )
-    document.querySelector('.person').src=`../public/img/personnage/person${id}.svg`;
+    document.querySelector('.person').src=`./public/img/personnage/person${id}.svg`;
     id_perso=document.querySelector('.hide').value=id;
    
 });
