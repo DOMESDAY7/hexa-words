@@ -6,13 +6,14 @@ let story = document.querySelector(".why");
 let inputId_perso = document.querySelector(".id_perso")
 inputName.addEventListener('keyup',function(){
     namePerso.textContent=inputName.value;
-    // if (inputName.value.length==10){
-    //      message.textContent="You have a too long nickname "
-    // }
-   
 })
 sub.addEventListener("click",()=>{
+    if (inputName.value != null){
+        message.textContent="your nickname is missing"
 
+    }else if (story.value != null){
+        message.textContent ="you have nothing to tell us !"
+    }
     user_story ={
         id_perso: inputId_perso.value,
         nickname : inputName.value,
