@@ -107,6 +107,11 @@ input{
     display: inline-block;
     margin: auto;
 }
+.message{
+    color:red;
+    text-align: center;
+    font-family: 'Questrial',sans-serif;
+}
 @keyframes call-back {
     0%{}
    50%{transform: scale(1.2);}

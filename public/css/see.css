@@ -1,30 +1,44 @@
+*{
+    box-sizing: border-box;
+}
 body{
     background-color:#E3E3E3 ;
     margin: 0;
     background-image: url(../img/Idiot\ bg.svg);
     background-repeat: round;
     overflow-x: hidden;
+    display: grid;
+    grid-template: 
+    "title"0.1fr
+    "main"1fr
+    ;
+    height: 100vh;
+  
 }
 .content_perso{
-    width: 30%;
+    width: 15%;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-   
+    position: absolute;
+    left: 1%;
+    bottom:70%;
+    z-index: 2;
 }
 .img_perso{
     height: auto;
-    width: 50%;
+    width: 100%;
     margin: auto;
     border-radius: 50%;
-    border: solid white;
+    border: solid  #E3E3E3;
 }
 .title{
     font-family: 'Quando', serif;
     color: #1D1075;
     text-align: center;
-    font-size: calc(14px + (40 - 14) * ((100vw - 300px) / (1600 - 300)));
+    font-size: calc(17px + (40 - 17) * ((100vw - 300px) / (1600 - 300)));
+    grid-area: title;
 }
 .content_user{
     display: flex;
@@ -41,55 +55,109 @@ body{
 }
 .nickname{
     font-family: 'Quando', serif;
-    color: white;
+    font-size: 0.875rem;
+    grid-area: pseudo;
+    color: #1D1075;
+    align-self: end;
+    justify-self: end;
 
 }
 .story{
     font-family: 'Questrial', sans-serif;
     padding: 10px;
+    color: white;
+    text-align: center;
+    max-width: 500px;
+    line-height: 1.25;
+    word-wrap: break-word;
 }
 main{
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    
-    align-items: start;
+ 
+    /* height: 100vh; */
     width: 100vw;
+  /* border: solid red; */
+  grid-area: main;
+  height: 90vh;
+  /* column-fill: balance; */
   
 }
 .content_story{
-    display: none;
-    color: black;
     border-radius:  10px;
-    background-color: rgba(235, 235, 235, 0.719);
-    backdrop-filter: blur(10px); 
+    background-color: #1D1075;
+    grid-area: content_story;
+   
+    
     
 }
-@media (min-width:768px) {
+.content_card{
+    display: grid;
+    grid-template: 
+    "pseudo pseudo"0.1fr
+    "content_story content_story"1fr/0.3fr 1fr;
+    ;
+    width: 90vw;
+    margin: auto;
+    position: relative;
+    margin-bottom: 3%;
+}
+/* *version tablette */
+@media (min-width:481px) {
+    .story{
+        margin: auto;
+    }
+    .content_story{
+        padding: 20px 0 20px 0;
+    }
+    .content_perso{
+        width:10%;
+        /* bottom: 20%; */
+    }
+}
+/* !version ordi  */
+@media (min-width:1024px) {
+    
     .content_user{
         width:20%;
         padding: 2%;
     }
     .content_perso{
+        position: unset;
         width: 70%;
+        align-self: center;
+        justify-self: center;
+        grid-area: content_perso;
     }
     .content_story{
-        display: inline;
-        margin: auto;
-        margin-left: -50%;
-        margin-top: 7%;
+        
+        
+        justify-self: start;
+        
     }
+   .nickname{
+       justify-self: start;
+   }
     .content_card{
-        display: flex;
-        margin-bottom: 2%;
-        justify-content: center;
-        align-items: center;
+        display: grid;
+        grid-template: 
+        "content_perso pseudo"1fr
+        "content_perso content_story"1fr/0.3fr 1fr;
+        ;
+        width: 40vw;
+        margin: unset;
+        margin-bottom: unset;
     }
-    .nickname{
-        color: #1D1075;
+    body {
+        grid-template: 
+    "title"10vh
+    "main"1fr
+    ;
     }
-    .content_user{
-        background-color:rgba(255, 255, 255, 0);
+    main{
+        column-width: 50%;
+        column-count: 2;
+        column-fill: balance;
+        break-after: auto;
+        height: 100vh;
+        overflow: auto;
     }
 }
