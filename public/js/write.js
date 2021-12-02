@@ -20,11 +20,16 @@ sub.addEventListener("click",()=>{
 })
 
 function sendToApi() {
+    let textNickname = inputName.value;
+    textNickname = cleanData(textNickname);
+    let textStory = story.value;
+    textStory = cleanData(textStory);
     user_story = {
         id_perso: inputId_perso.value,
-        nickname: inputName.value,
-        story: story.value
+        nickname: textNickname,
+        story: textStory
     };
+    console.log(user_story)
     fetch("sendData.php", {
         method: "POST",
         body: JSON.stringify(user_story),
@@ -34,4 +39,9 @@ function sendToApi() {
     })
         .then(document.location = "?page=see")
         .catch(console.log("une erreur c'est produite"));
+}
+function cleanData(string){
+    string = string.replace(/[']/g, " \'");
+    string = string.replace(/["]/g, "\"");
+    return string;
 }

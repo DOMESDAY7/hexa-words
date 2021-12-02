@@ -38,9 +38,9 @@ function listIdiot(){
     $req=$link->query($sql);
     $cpt = 0;
     while ($data=$req->fetch(PDO::FETCH_ASSOC)){ 
-        
+      
         ?>
-            
+        
             <div class="content_card">
                     <div class="content_perso"><img src="./public/img/personnage/person<?php echo $data["id_perso"]?>.svg" class="img_perso"></div>
                     <h1 class="nickname"><?php echo $data["nickname"] ?></h1><br>
@@ -51,4 +51,5 @@ function listIdiot(){
             
 
     <?php }
+    
 }
