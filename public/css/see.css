@@ -29,6 +29,12 @@ body{
     background-color: #1D1075;
     font-size: calc(11px + (15 - 11) * ((100vw - 300px) / (1600 - 300)));
     text-align: center;
+    transition: 0.8s ease;
+    border: #1D1075 solid 1px;
+}
+.write_btn:hover{
+    color: #1D1075;
+    background-color: white;
 }
 .content_perso{
     width: 15%;

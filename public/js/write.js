@@ -10,7 +10,7 @@ inputName.addEventListener('keyup',function(){
 })
 sub.addEventListener("click",()=>{
     if (inputName.value == ""){
-        message.textContent="Your nickname is missing";
+        message.textContent="Give us a little name";
 
     }else if (story.value == ""){
         message.textContent ="You have nothing to tell us ?! Are you sure ? ";

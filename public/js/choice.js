@@ -1,11 +1,12 @@
 
 let id=1;
-let id_perso;
 let sub=document.querySelector('.choose_button');
 let form=document.querySelector(".form");
 let refresh=document.querySelector("#refresh");
 let rand = document.querySelector('.rand_button');
 let person = document.querySelector(".person");
+let id_perso = document.querySelector(".hide")
+id_perso.value = 1;
 rand.addEventListener("click",function(){
     refresh.animate([
         {transform:"rotate(0deg)"},

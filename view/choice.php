@@ -1,8 +1,8 @@
 <body>
     <main class="content">
         <button class="rand_button">randomize<br><span class="material-icons" id=refresh>refresh</span></button>
-        <form method="GET"  class="form">
-            <input type="text"name="page" value="write">
+        <form method="GET" class="form">
+            <input type="text" name="page" value="write" id =page>
             <input type="text" name="id_perso" class="hide">
         </form>
         <button type="submit" class="choose_button">Chooses <br><span class="material-icons">check</span></button>

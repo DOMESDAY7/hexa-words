@@ -15,8 +15,8 @@ body{
     display: grid;
    grid-template: 
    "rand" 0.25fr
-   "choose" 0.5fr
-   "content_person" 1fr;
+   "choose" 0.1fr
+   "content_person" 0.5fr;
    gap: 5vh 0;
    height: 100vh;
    width:100vw;
@@ -52,7 +52,7 @@ body{
     background-color:  #2100FF;
     border: black 2px solid;
     font-family: 'Questrial', sans-serif;
-    padding: 2vh 5vh 2vh 5vh;
+    padding: 20px 30px;
     color: white;
     border-radius: 5%;
     align-self: start;
@@ -89,6 +89,9 @@ body{
     border-radius: 50%;
 }
 .hide{
+    display: none;
+}
+#page{
     display: none;
 }
 @keyframes rotate {
