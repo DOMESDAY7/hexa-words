@@ -13,7 +13,22 @@ body{
     "main"1fr
     ;
     height: 100vh;
+    position: relative;
   
+}
+.write_btn{
+    position: absolute;
+    right: 50%;
+    top: 7%;
+    transform: translate(50%,0);
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    font-family: 'Quando',sans-serif;
+    background-color: #1D1075;
+    font-size: calc(11px + (15 - 11) * ((100vw - 300px) / (1600 - 300)));
+    text-align: center;
 }
 .content_perso{
     width: 15%;
@@ -112,6 +127,12 @@ main{
         width:10%;
         /* bottom: 20%; */
     }
+    .write_btn{
+        
+        right: 20%;
+        top: 5%;
+    }
+       
 }
 /* !version ordi  */
 @media (min-width:1024px) {

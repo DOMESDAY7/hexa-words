@@ -1,5 +1,9 @@
 <?php 
 $data = json_decode(stripslashes(file_get_contents("php://input")),true);
-// var_dump($data);
+// $data = json_decode($data);
+var_dump($data);
+$nickname = $data["nickname"];
+$id = $data["id_perso"];
+$story = $data["story"];
 require 'model/model.php';
-postIdiot($data);
+postIdiot($id,$nickname,$story);

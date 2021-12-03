@@ -12,25 +12,25 @@ function verification($string){
     htmlspecialchars($string);//contre les injection HTML
     return $string;
 }
-function postIdiot($data){
+function postIdiot($id,$nickname,$story){
+    try{
     require './connect/detection.php';
-    $nickname=$data["nickname"];
-    $story=$data["story"];
-    $id=$data["id_perso"];
     $nickname=verification($nickname);
     $nickname=htmlspecialchars($nickname);
     $nickname=filter_var($nickname,FILTER_SANITIZE_ADD_SLASHES); 
-    $nickname=filter_var($nickname,FILTER_SANITIZE_SPECIAL_CHARS); 
     $story=verification($story);
     $story=htmlspecialchars($story);
     $story=filter_var($story,FILTER_SANITIZE_ADD_SLASHES);
-    $story=filter_var($story,FILTER_SANITIZE_SPECIAL_CHARS);
     $sql_insert="INSERT INTO `user_story` (`id`, `nickname`, `story`,`id_perso`) VALUES (NULL, '$nickname', '$story', '$id')";
     $req=$link->prepare($sql_insert);
     //bindValue
     //bindParam
     $req->execute();
-    
+    return true;
+    }
+    catch (Exception $e){
+        return false;
+    }
 }
 function listIdiot(){
     require './connect/detection.php';
