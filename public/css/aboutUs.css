@@ -1,0 +1,91 @@
+body{
+    background-color: #1D1075;
+    overflow-x: hidden;
+}
+::-webkit-scrollbar-thumb{
+    background-color: white;
+    border-radius: 15px;
+}
+::-webkit-scrollbar-track{
+    background-color: rgba(0, 0, 0, 0);
+}
+h1{
+    color: white;
+    font-family: 'Quando',sans-serif;
+    text-align: center;
+}
+h5{
+    color: white;
+    font-family: 'Quando',sans-serif;
+   text-align: center;
+}
+p{
+    text-indent: 5%;
+    max-width: 500px;
+    color: white;
+    font-family: 'Questrial',sans-serif;
+    line-height: 1.5;
+    margin: auto;
+}
+a{
+    /* text-decoration: none; */
+    color: white;
+    font-style: italic;
+    text-decoration: underline overline white;
+}
+code{
+    color: white;
+    text-align: center;
+}
+main{
+    width: 70vw;
+    margin: auto;
+   
+}
+.student{
+    text-align: center;
+}
+.carre{
+    border: black solid 1px;
+    width: 10vw;
+    min-width: 10px;
+    max-width: 90px;
+    height: 10vw;
+    min-height: 10px;
+    max-height: 90px;
+    margin: auto;
+    transition: 0.3s ease;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+}
+.carre:hover{
+    transform:scale(1.25)
+}
+article{
+    text-align: center;
+}
+@media (min-width:1024px) {
+    main{
+        width: 100vw;
+        height: 80vh;
+        display: grid;
+        grid-template:
+        "context context"1fr
+        "thecolor concept"1fr / 1fr 1fr
+        
+        ;
+    }
+    article{
+        grid-area: thecolor;
+        justify-self: end;
+    }
+    .context{
+        grid-area: context;
+    }
+    .concept{
+        grid-area: concept;
+        justify-self: start;
+        align-self: center;
+        margin: unset;
+    }
+}
