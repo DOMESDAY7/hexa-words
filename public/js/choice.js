@@ -14,7 +14,7 @@ rand.addEventListener("click",function(){
     ],
     {duration:1000}
     )
-    if( id<10){
+    if( id<nbphoto){
         id++;
         }else{
         id=1;

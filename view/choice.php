@@ -12,7 +12,7 @@
     <img src="blob.svg" alt="" class="blob1">
     <img src="blob.svg" alt="" class="blob2">
     <script src="./public/js/choice.js "></script>
-
+    <script>let nbphoto = <?= $nbphoto ?>;</script>
 </body>
 
 </html>

@@ -55,3 +55,5 @@ function listIdiot()
 
 <?php }
 }
+// on compte le nombre de fichier dans le dossier
+$nbphoto= count(glob("./public/img/personnage/*.*"));
