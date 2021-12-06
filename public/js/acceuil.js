@@ -23,3 +23,4 @@ document.querySelectorAll(".button").forEach(e=>{
 })
 
 //tant que le curseur est sur l'élément ayant la class titreIdiot faire idiot.innerHTML
+
