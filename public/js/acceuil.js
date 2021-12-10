@@ -1,26 +1,40 @@
-"use strict"
 let idiot = document.querySelector(".titreIdiot");
-// taille du navigateur
-let width = window.innerWidth;
-//si il s'agit d'un téléphone ce code ne sera pas pris en compte
-let idiotON=false;
-if (width > 800) {
-    
-   idiot.onmouseover=function(){
-    idiotON=true;
-    idiot.innerHTML="#1D1075";
-   }
+let hexa = document.querySelector(".hexa")
+
+
+let str = document.querySelectorAll(".titreIdiot>span");
+let cpt = 0;
+setInterval(() => {
+    goDown(str[cpt]);
+    cpt++;
+    if(cpt==str.length){
+        cpt=0;
+    }
+}, 1000);
+
+  
+
+
+function goDown(el) {
+    el.style.backgroundColor ="red"
+//     el.animate([
+     
+//         {transform:'translateY(10px)'}
+
+//         ], {
+//             duration: 1000
+//         }
+
+//     )
+// }
+
+function goUp(el) {
+    el.animate([{
+            transform: 'translate(0,50%)'
+        }], {
+            duration: 1000
+        }
+
+    )
+
 }
-// document.querySelector(".button").addEventListener("click",setTimeout(function(){
-//     document.querySelector('.content').style.marginTop='-100vh';
-// },2000))
-document.querySelectorAll(".button").forEach(e=>{
-    e.addEventListener("click",function(){
-        document.querySelector('.content').animate([{marginTop:'-100vh'}],{duration:1000});
-        
-    })
-
-})
-
-//tant que le curseur est sur l'élément ayant la class titreIdiot faire idiot.innerHTML
-
