@@ -1,40 +1,53 @@
 let idiot = document.querySelector(".titreIdiot");
-let hexa = document.querySelector(".hexa")
-
-
+let hexa = document.querySelector(".hexa");
 let str = document.querySelectorAll(".titreIdiot>span");
 let cpt = 0;
-setInterval(() => {
-    goDown(str[cpt]);
+let content_titre= document.querySelector(".content_titre")
+let textIdiot = {
+    hexa: ["1", "D", "1", "0", "7", "5"],
+    word: ["I", "d", "i", "o", "t", "s"]
+}
+let interval = setInterval(() => {
+    goDownChangeLetter(str[cpt]);
+    
     cpt++;
-    if(cpt==str.length){
-        cpt=0;
+    if (cpt == str.length) {
+        clearInterval(interval)
     }
-}, 1000);
 
-  
+}, 200);
 
-
-function goDown(el) {
-    el.style.backgroundColor ="red"
-//     el.animate([
-     
-//         {transform:'translateY(10px)'}
-
-//         ], {
-//             duration: 1000
-//         }
-
-//     )
-// }
-
-function goUp(el) {
+function goDownChangeLetter(el) {
+    // el.style.backgroundColor ="red"
+    console.log(el)
     el.animate([{
-            transform: 'translate(0,50%)'
-        }], {
-            duration: 1000
+                top: '0'
+            },
+            {
+                top: //taille du conteneur titre
+            }
+
+        ], {
+            duration: 500
         }
 
     )
+   
+    setTimeout(() => {
+        // el.textContent = textIdiot.hexa[cpt]
+        el.style.top="80px"
+    }, 499);
+    // el.animate([{
+    //             top: '80px'
+    //         },
+    //         {
+    //             top: '0'
+    //         }
+
+    //     ], {
+    //         duration: 1000
+    //     }
+
+    // )
 
 }
