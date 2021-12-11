@@ -1,4 +1,5 @@
 <?php
+session_start();
 //on gère l'envoi du form dans cette page
 function controlSQL($string)
 {
@@ -14,7 +15,7 @@ function verification($string)
     htmlspecialchars($string); //contre les injection HTML
     return $string;
 }
-function postIdiot($id, $nickname, $story)
+function postIdiot($id, $nickname, $story,$token)
 {
     try {
         require './connect/detection.php';
@@ -24,7 +25,7 @@ function postIdiot($id, $nickname, $story)
         $story = verification($story);
         $story = htmlspecialchars($story);
         $story = filter_var($story, FILTER_SANITIZE_ADD_SLASHES);
-        $sql_insert = "INSERT INTO `user_story` (`id`, `nickname`, `story`,`id_perso`) VALUES (NULL, '$nickname', '$story', '$id')";
+        $sql_insert = "INSERT INTO `user_story` (`id`, `nickname`, `story`,`id_perso`,`token`) VALUES (NULL, '$nickname', '$story', '$id','$token')";
         $req = $link->prepare($sql_insert);
         //bindValue
         //bindParam
@@ -39,7 +40,6 @@ function listIdiot()
     require './connect/detection.php';
     $sql = "SELECT * FROM user_story ORDER BY id DESC";
     $req = $link->query($sql);
-    $cpt = 0;
     while ($data = $req->fetch(PDO::FETCH_ASSOC)) {
 
 ?>
@@ -50,10 +50,17 @@ function listIdiot()
             <section class="content_story">
                 <p class="story" id="user_<?php echo $data["id"]; ?>">" <?php echo $data["story"] ?> "</p>
             </section>
+            <input type="text" data-token='<?php echo $data["token"]; ?>' style="display:none">
         </div>
 
 
 <?php }
 }
+function createToken(){
+    $token= openssl_random_pseudo_bytes(16);
+    $token=bin2hex($token);
+    return $token;
+}
+
 // on compte le nombre de fichier dans le dossier
 $nbphoto= count(glob("./public/img/personnage/*.*"));

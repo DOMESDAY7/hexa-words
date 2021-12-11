@@ -94,6 +94,12 @@ body{
 #page{
     display: none;
 }
+.unselect{
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
 @keyframes rotate {
     from{
         transform:translate(-50%,0)
@@ -107,7 +113,7 @@ body{
     .content{
         grid-template:
         "content_person rand"1fr
-        "content_person choose"1fr /1fr 0.75fr
+        "content_person choose"1fr /0.5fr 0.5fr
         ;
     }
     .circle{

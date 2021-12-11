@@ -5,7 +5,11 @@
         listIdiot();
         ?>
     </main>
+    <script>
+        localStorage.setItem("token","<?php echo $_SESSION["token"]; ?>")
+    </script>
     <script src="./public/js/see.js"></script>
+    
 </body>
 
 </html>

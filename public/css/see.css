@@ -10,6 +10,7 @@ body{
     display: grid;
     grid-template: 
     "title"0.1fr
+    "write_button"0.1fr
     "main"1fr
     ;
     height: 100vh;
@@ -17,25 +18,22 @@ body{
   
 }
 .write_btn{
-    position: absolute;
-    right: 50%;
-    top: 7%;
-    transform: translate(50%,0);
+    color: #1D1075;
+    background-color: white;
     text-decoration: none;
-    color: white;
     padding: 10px;
     border-radius: 10px;
     font-family: 'Quando',sans-serif;
-    background-color: #1D1075;
     font-size: calc(11px + (15 - 11) * ((100vw - 300px) / (1600 - 300)));
     text-align: center;
     transition: 0.8s ease;
     border: #1D1075 solid 1px;
+    grid-area: write_button;
+    justify-self: center;
+    align-self: center;
+    width: 30%;
 }
-.write_btn:hover{
-    color: #1D1075;
-    background-color: white;
-}
+
 .content_perso{
     width: 15%;
     border-radius: 50%;
@@ -133,11 +131,7 @@ main{
         width:10%;
         /* bottom: 20%; */
     }
-    .write_btn{
-        
-        right: 20%;
-        top: 5%;
-    }
+ 
        
 }
 /* !version ordi  */
@@ -162,6 +156,9 @@ main{
    .nickname{
        justify-self: start;
    }
+   .write_btn{
+       width: 20%;
+   }
     .content_card{
         display: grid;
         grid-template: 
@@ -172,17 +169,17 @@ main{
         margin: unset;
         margin-bottom: unset;
     }
+  
     body {
         grid-template: 
-    "title"10vh
-    "main"1fr
+    "title "10vh
+    "write_button"10vh
+    "main "1fr 
     ;
+    
     }
+  
     main{
-        /* column-width: 40%;
-        column-count: 2; */
-       
-        /* break-inside: avoid-column; */
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;

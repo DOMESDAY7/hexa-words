@@ -147,3 +147,10 @@ h1 {
     position: relative;
 }
 
+@media (min-width:1024px) {
+    .button{
+        width:50%;
+    }
+    
+}
+

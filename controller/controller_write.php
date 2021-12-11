@@ -10,7 +10,9 @@ if( !isset($_POST["nickname"]) || !isset($_POST["id_perso"]) || !isset($_POST["s
     $nickname = $_POST["nickname"];
     $id = $_POST["id_perso"];
     $story = $_POST["story"];
-    if (postIdiot($id,$nickname,$story)){
+    $token = createToken();
+    if (postIdiot($id,$nickname,$story,$token)){
+        $_SESSION["token"]=$token;
         header("Location:?page=see");
     }
 }
