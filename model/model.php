@@ -15,7 +15,7 @@ function verification($string)
     htmlspecialchars($string); //contre les injection HTML
     return $string;
 }
-function postIdiot($id, $nickname, $story,$token)
+function postIdiot($id, $nickname, $story, $token)
 {
     try {
         require './connect/detection.php';
@@ -44,24 +44,26 @@ function listIdiot()
 
 ?>
 
-        <div class="content_card">
-        <span class="material-icons-outlined cross" id="<?php echo $data["id"] ?>">highlight_off</span>
+        <div class="content_card" id="<?php echo $data["id"]; ?>">
+            <lord-icon src="https://cdn.lordicon.com/gsqxdxog.json" trigger="loop" colors="primary:#121331,secondary:#000000" style="width:32px;height:32px" class="cross" id="<?php echo $data["id"]; ?>">
+            </lord-icon>
             <div class="content_perso"><img src="./public/img/personnage/person<?php echo $data["id_perso"] ?>.svg" class="img_perso"></div>
             <h1 class="nickname"><?php echo $data["nickname"] ?></h1><br>
             <section class="content_story">
                 <p class="story" id="user_<?php echo $data["id"]; ?>">" <?php echo $data["story"] ?> "</p>
             </section>
-            <input type="text" data-token='<?php echo $data["token"]; ?>' style="display:none">
+            <input type="text" data-token='<?php echo $data["token"]; ?>' style="display:none" id="<?php echo $data["id"]; ?>">
         </div>
 
 
 <?php }
 }
-function createToken(){
-    $token= openssl_random_pseudo_bytes(16);
-    $token=bin2hex($token);
+function createToken()
+{
+    $token = openssl_random_pseudo_bytes(16);
+    $token = bin2hex($token);
     return $token;
 }
 
 // on compte le nombre de fichier dans le dossier
-$nbphoto= count(glob("./public/img/personnage/*.*"));
+$nbphoto = count(glob("./public/img/personnage/*.*"));
