@@ -45,6 +45,7 @@ function listIdiot()
 ?>
 
         <div class="content_card">
+        <span class="material-icons-outlined cross" id="<?php echo $data["id"] ?>">highlight_off</span>
             <div class="content_perso"><img src="./public/img/personnage/person<?php echo $data["id_perso"] ?>.svg" class="img_perso"></div>
             <h1 class="nickname"><?php echo $data["nickname"] ?></h1><br>
             <section class="content_story">
