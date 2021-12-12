@@ -31,5 +31,22 @@ rand.addEventListener("click",function(){
    
 });
 sub.addEventListener('click',()=>{
+    person.animate([
+        {transform:"scale(1)"},
+        {transform:"scale(1.2)"},
+        {transform:"scale(1)"}
+    ],
+    {duration:200}
+    )
     form.submit();
+})
+person.addEventListener("click",()=>{
+    person.animate([
+        {transform:"scale(1)"},
+        {transform:"scale(1.2)"},
+        {transform:"scale(1)"}
+    ],
+    {duration:200}
+    )
+    form.submit()
 })

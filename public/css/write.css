@@ -5,13 +5,24 @@ body{
     grid-template:
     "content_perso"0.1fr
     "form"0.5fr
-    "submit_button"0.2fr
+    "submit_button"0.3fr
     ;
     gap:2vh 5vh;
     height: 100vh;
     background-image: url(../img/Idiot\ bg.svg);
     background-repeat: round;
    
+}
+.choice_btn{
+    background-color: #1D1075;
+    border: solid 3px white;
+    border-radius: 50%;
+    padding: 5px;
+    text-decoration: none;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    text-decoration: none;
 }
 .submit_button{
     grid-area: submit_button;

@@ -10,14 +10,23 @@ body{
     background-repeat: round;
 
 }
+.title_choice{
+    grid-area: title_choice;
+    font-family: 'Quando',sans-serif;
+    color: #1D1075;
+    text-align: center;
+    font-size: 1.5rem;
+}
 .content{
     margin-top: 2vh;
     display: grid;
    grid-template: 
-   "rand" 0.25fr
+   "home_btn"0.2fr
+   "title_choice"0.1fr
+   "rand" 0.1fr
    "choose" 0.1fr
    "content_person" 0.5fr;
-   gap: 5vh 0;
+   gap: 3vh 0;
    height: 100vh;
    width:100vw;
 
@@ -33,7 +42,27 @@ body{
     width: 70%;
     transition: 0.8s ease;
 }
-
+.home_btn{
+    background-color: #1D1075;
+    font-family: 'Questrial',sans-serif;
+    border: solid white 3px;
+    padding: 7px;
+    border-radius: 50%;
+    grid-area: home_btn;
+    text-decoration: none;
+    transition: transform 0.8s ease;
+   cursor: pointer;
+   height: 5vh;
+   width: 5vh;
+   justify-self: center;
+   align-self: center;
+   display: flex;
+   justify-content: center;
+   align-content: center;
+}
+.home_btn:hover{
+    transform: scale(0.8);
+}
 .rand_button{
    color: white;
    background-color: black; 
@@ -48,9 +77,10 @@ body{
    cursor: pointer;
   
 }
+
 .choose_button{
-    background-color:  #2100FF;
-    border: black 2px solid;
+    background-color:  #1D1075;
+    border: none;
     font-family: 'Questrial', sans-serif;
     padding: 20px 30px;
     color: white;
@@ -112,10 +142,35 @@ body{
 @media (min-width:600px) {
     .content{
         grid-template:
+        "title_choice title_choice "0.5fr
         "content_person rand"1fr
-        "content_person choose"1fr /0.5fr 0.5fr
+        "content_person choose"1fr /1fr 0.8fr
         ;
     }
+    .home_btn{
+        position: absolute;
+        top: 5%;
+        left: 5%;
+    }
+    
+    .title_choice{
+        font-size: 2rem;
+        animation: bouing 3s infinite;
+        align-self: end;
+        justify-self: center;
+    }
+    .content_person{
+        width: 60%;
+        justify-self: end;
+        min-width: 300px;
+    }
+    .rand_button{
+        justify-self: start;
+    }
+    .choose_button{
+        justify-self: start;
+    }
+   
     .circle{
         width: 40vw;
         height: 40vw;
@@ -125,7 +180,25 @@ body{
         font-size: 1.5rem;
     }
     .choose_button{
-        padding: 30px 50px 30px 50px;
+        padding: 30px;
         font-size: 1.5rem;
     }
+}
+@keyframes bouing {
+    0%{}
+    25%{
+        transform: translate(0,5%);
+       
+    }
+    50%{
+        transform: translate(0,30%) skew(-20deg);
+       
+    }
+    75%{
+        transform: translate(0,5%);
+        
+    }
+    100%{}
+    
+    
 }
