@@ -1,6 +1,7 @@
 body{
     background-color: #1D1075;
     overflow-x: hidden;
+    margin: 0;
 }
 ::-webkit-scrollbar-thumb{
     background-color: white;
@@ -28,7 +29,6 @@ p{
     margin: auto;
 }
 a{
-    /* text-decoration: none; */
     color: white;
     font-style: italic;
     text-decoration: underline overline white;
@@ -39,14 +39,14 @@ code{
 }
 main{
     width: 70vw;
-    margin: auto;
-   
+    margin: auto; 
 }
+
 .student{
     text-align: center;
 }
 .carre{
-    border: black solid 1px;
+    border: white solid 1px;
     width: 10vw;
     min-width: 10px;
     max-width: 90px;
@@ -57,6 +57,13 @@ main{
     transition: 0.3s ease;
     margin-top: 3vh;
     margin-bottom: 3vh;
+    background-color: #1D1075;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    color: white;
 }
 .carre:hover{
     transform:scale(1.25)
@@ -65,15 +72,22 @@ article{
     text-align: center;
 }
 @media (min-width:1024px) {
+    .title{
+        grid-area: title;
+        justify-self:center ;
+        align-self: center;
+    }
     main{
-        width: 100vw;
-        height: 80vh;
+        width: 70vw;
+        height: 100vh;
         display: grid;
         grid-template:
+        "title title"0.3fr
         "context context"1fr
         "thecolor concept"1fr / 1fr 1fr
         
         ;
+        background-color: rgb(0, 0, 99);
     }
     article{
         grid-area: thecolor;
