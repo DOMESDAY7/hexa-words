@@ -20,7 +20,7 @@
     <footer>
         <a href="?page=aboutUs" class="about unselect">About us</a>
     </footer>
-    <script src="./public/js/acceuil.js"></script>
+    <script src="./public/js/accueille.js"></script>
 </body>
 
 </html>

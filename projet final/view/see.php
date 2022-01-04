@@ -1,6 +1,6 @@
 <body>
     <h1 class="title">Your are not alone</h1> <a href="?page=choice" class="write_btn">You have something to say?</a>
-    <a href="?page=acceuil" class="home_btn">
+    <a href="?page=accueille" class="home_btn">
         <lord-icon src="https://cdn.lordicon.com/gmzxduhd.json" trigger="loop" colors="primary:#FFFFFF,secondary:#FFFFFF" style="width:30px;height:30px">
         </lord-icon>
     </a>

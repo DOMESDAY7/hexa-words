@@ -1,8 +1,8 @@
 <?php
 if (!isset($_GET["page"])) {
-    $page = "acceuil";
+    $page = "accueille";
     require 'view/head.php';
-    require 'view/acceuil.php';
+    require 'view/accueille.php';
 } else {
     $page = $_GET["page"];
     require 'model/model.php';

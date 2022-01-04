@@ -10,7 +10,7 @@
         <button type="submit" class="choose_button unselect">Chooses <br><span class="material-icons">check</span></button>
         <section class="content_person"><img src="./public/img/personnage/person1.svg" alt="idiot" class="person">
         </section>
-        <a href="?page=acceuil" class="home_btn">
+        <a href="?page=accueille" class="home_btn">
             <lord-icon src="https://cdn.lordicon.com/gmzxduhd.json" trigger="loop" colors="primary:#FFFFFF,secondary:#FFFFFF" style="width:50px;height:50px">
             </lord-icon>
         </a>
